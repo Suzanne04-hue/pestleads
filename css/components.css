@@ -1,0 +1,99 @@
+/* ============================================
+   PESTLEADS — COMPONENTS.CSS
+   Buttons and glass cards
+   ============================================ */
+
+/* ─── BUTTONS ─── */
+
+/* Base button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: transform 150ms ease-in-out,
+              box-shadow 150ms ease-in-out;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Primary — Venom Green (homeowner actions) */
+.btn-primary {
+  background: linear-gradient(135deg, var(--green-1), var(--green-2));
+  color: #FFFFFF;
+  box-shadow: 0 4px 24px rgba(29, 185, 84, 0.25);
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 32px rgba(29, 185, 84, 0.4);
+}
+
+/* Secondary — Ember Amber (business owner actions) */
+.btn-secondary {
+  background: linear-gradient(135deg, var(--amber-1), var(--amber-2));
+  color: #FFFFFF;
+  box-shadow: 0 4px 24px rgba(240, 144, 10, 0.25);
+}
+
+.btn-secondary:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 32px rgba(240, 144, 10, 0.4);
+}
+
+/* Ghost */
+.btn-ghost {
+  background: transparent;
+  border: 1.5px solid var(--border-glass);
+  color: var(--text-primary);
+}
+
+.btn-ghost:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: var(--bg-glass);
+}
+
+/* Emergency — Pulse Red (Triple Zero only) */
+.btn-emergency {
+  background: var(--red-1);
+  color: #FFFFFF;
+  box-shadow: 0 4px 24px rgba(230, 57, 70, 0.35);
+}
+
+/* Full width variant */
+.btn-full {
+  width: 100%;
+}
+
+/* Mobile full width */
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+    min-height: 54px;
+  }
+}
+
+/* ─── GLASS CARDS ─── */
+.card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--border-glass);
+  border-radius: 24px;
+  transition: background var(--transition-mode),
+              border-color var(--transition-mode);
+}
+
+/* Mobile performance */
+@media (max-width: 768px) {
+  .card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}

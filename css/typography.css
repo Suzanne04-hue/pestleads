@@ -1,0 +1,65 @@
+/* ============================================
+   PESTLEADS — TYPOGRAPHY.CSS
+   Font definitions and text styles
+   ============================================ */
+
+/* ─── Base body type ─── */
+body {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+/* ─── Headings ─── */
+h1, h2, h3 {
+  font-family: 'Clash Display', sans-serif;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* ─── Body copy ─── */
+p {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ─── Microcopy ─── */
+.micro {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+/* ─── Trust line ─── */
+.trust-line {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+/* ─── Transitions ─── */
+h1, h2, h3, p {
+  transition: color var(--transition-mode);
+}
