@@ -1,0 +1,107 @@
+/* ============================================
+   PESTLEADS — LAYOUT.CSS
+   Page structure, grid, spacing
+   ============================================ */
+
+/* ─── Base reset for layout ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color var(--transition-mode),
+              color var(--transition-mode);
+  min-height: 100vh;
+}
+
+/* ─── Page wrapper ─── */
+.page-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ─── Section spacing ─── */
+.section {
+  padding: 96px 0;
+}
+
+/* ─── 12 column grid ─── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+/* ─── Grain texture overlay ─── */
+.grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ─── Gradient blooms ─── */
+.bloom-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bloom-violet {
+  position: absolute;
+  bottom: -200px;
+  left: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--glow-violet) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.bloom-green {
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--glow-green) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+/* ─── Content sits above blooms ─── */
+.content-layer {
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Mobile ─── */
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 0;
+  }
+
+  .page-wrapper {
+    padding: 0 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
