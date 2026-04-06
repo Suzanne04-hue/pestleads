@@ -6,29 +6,30 @@
 /* ─── DARK MODE (default) ─── */
 :root {
   /* Backgrounds */
-  --bg-primary:     #0A0A0F;
-  --bg-secondary:   #111118;
+  --bg-primary:     #0D1B2A;
+  --bg-secondary:   #112233;
   --bg-glass:       rgba(255, 255, 255, 0.04);
   --border-glass:   rgba(255, 255, 255, 0.08);
 
   /* Text */
-  --text-primary:   #F0EEF8;
-  --text-secondary: #9492A8;
+  --text-primary:   #FAFCFE;
+  --text-secondary: #5C7A8C;
 
   /* Brand */
-  --green-1:        #1DB954;
-  --green-2:        #0D9944;
-  --amber-1:        #F0900A;
-  --amber-2:        #C97508;
+  --teal-1:         #00A896;
+  --teal-2:         #02C5B0;
+  --amber-1:        #F4A261;
+  --amber-2:        #E76F51;
   --violet-1:       #6C63FF;
   --red-1:          #E63946;
 
   /* Glows */
-  --glow-green:     rgba(29, 185, 84, 0.15);
+  --glow-teal:      rgba(0, 168, 150, 0.18);
   --glow-violet:    rgba(108, 99, 255, 0.20);
+  --glow-amber:     rgba(244, 162, 97, 0.12);
 
   /* Widget border states */
-  --border-idle:      rgba(29, 185, 84, 0.3);
+  --border-idle:      rgba(0, 168, 150, 0.3);
   --border-loading:   #6C63FF;
   --border-result:    #6C63FF;
   --border-emergency: #E63946;
@@ -46,10 +47,11 @@
   --border-glass:   rgba(0, 0, 0, 0.08);
 
   /* Text */
-  --text-primary:   #0A0A0F;
-  --text-secondary: #6B6880;
+  --text-primary:   #0D1B2A;
+  --text-secondary: #5C7A8C;
 
   /* Glows */
-  --glow-green:     rgba(13, 153, 68, 0.12);
+  --glow-teal:      rgba(0, 168, 150, 0.12);
   --glow-violet:    rgba(108, 99, 255, 0.15);
+  --glow-amber:     rgba(244, 162, 97, 0.10);
 }

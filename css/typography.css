@@ -5,7 +5,7 @@
 
 /* ─── Base body type ─── */
 body {
-  font-family: 'Satoshi', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 17px;
   font-weight: 400;
   color: var(--text-primary);
@@ -13,29 +13,29 @@ body {
 
 /* ─── Headings ─── */
 h1, h2, h3 {
-  font-family: 'Clash Display', sans-serif;
+  font-family: 'Syne', sans-serif;
   line-height: 1.1;
   color: var(--text-primary);
 }
 
 h1 {
   font-size: clamp(36px, 6vw, 72px);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 h2 {
   font-size: clamp(32px, 4vw, 48px);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h3 {
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* ─── Body copy ─── */
 p {
-  font-family: 'Satoshi', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 17px;
   font-weight: 400;
   color: var(--text-secondary);
@@ -44,7 +44,7 @@ p {
 
 /* ─── Microcopy ─── */
 .micro {
-  font-family: 'Satoshi', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 13px;
   font-weight: 400;
   color: var(--text-secondary);
@@ -52,7 +52,7 @@ p {
 
 /* ─── Trust line ─── */
 .trust-line {
-  font-family: 'Satoshi', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 13px;
   font-weight: 400;
   color: var(--text-secondary);
