@@ -70,7 +70,7 @@ body {
   left: -200px;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, var(--glow-violet) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--glow-amber) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -80,7 +80,7 @@ body {
   right: -200px;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, var(--glow-green) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--glow-teal) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -131,16 +131,16 @@ body {
   gap: 10px;
 }
 
-.nav-logo-img {
-  width: 32px;
-  height: 32px;
+.nav-logo-text {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-primary);
+  transition: color var(--transition-mode);
 }
 
-.nav-logo-text {
-  font-family: 'Clash Display', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--text-primary);
+.nav-logo-accent {
+  color: var(--teal-1);
   transition: color var(--transition-mode);
 }
 
@@ -181,5 +181,82 @@ body {
 @media (max-width: 768px) {
   .nav-cta {
     display: none;
+  }
+}
+/* ─── HERO ─── */
+.hero-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-inner {
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hero-headline {
+  line-height: 1.05;
+}
+
+.hero-headline-accent {
+  color: var(--teal-1);
+  transition: color var(--transition-mode);
+}
+
+.hero-sub {
+  font-size: 18px;
+  max-width: 580px;
+  line-height: 1.7;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.hero-btn-main {
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.hero-btn-secondary {
+  font-size: 14px;
+  padding: 0;
+  border: none;
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  background: transparent;
+}
+
+.hero-btn-secondary:hover {
+  color: var(--text-primary);
+  background: transparent;
+  border: none;
+}
+
+.hero-trust {
+  margin-top: 8px;
+}
+
+/* ─── HERO MOBILE ─── */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 100svh;
+    padding-top: 40px;
+  }
+
+  .hero-ctas {
+    width: 100%;
+  }
+
+  .hero-btn-main {
+    width: 100%;
+    text-align: center;
   }
 }
