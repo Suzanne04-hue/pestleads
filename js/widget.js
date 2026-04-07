@@ -130,8 +130,7 @@ if (identifyBtn) {
           description: pestDesc.value.trim()
         });
       }
-
-      const response = await fetch('/.netlify/functions/identify', {
+const response = await fetch('/api/identify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body
