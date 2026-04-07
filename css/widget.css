@@ -1,0 +1,321 @@
+/* ============================================
+   PESTLEADS — WIDGET.CSS
+   All widget states and styles
+   ============================================ */
+
+/* ─── WIDGET SECTION ─── */
+.widget-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.widget-header {
+  text-align: center;
+  max-width: 580px;
+  margin: 0 auto 48px;
+}
+
+.widget-header h2 {
+  margin-bottom: 16px;
+}
+
+/* ─── WIDGET CARD ─── */
+.widget-card {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid var(--border-idle);
+  box-shadow: 0 0 40px var(--glow-teal);
+  transition: border-color 500ms ease-in-out,
+              box-shadow 500ms ease-in-out;
+}
+
+/* Border states */
+.widget-card.state-loading {
+  border-color: var(--border-loading);
+  box-shadow: 0 0 40px var(--glow-violet);
+  animation: violet-pulse 1.8s ease-in-out infinite;
+}
+
+.widget-card.state-result {
+  border-color: var(--border-result);
+  box-shadow: 0 0 40px var(--glow-violet);
+}
+
+.widget-card.state-emergency {
+  border-color: var(--border-emergency) !important;
+  box-shadow: 0 0 40px rgba(230, 57, 70, 0.3) !important;
+  transition: none !important;
+}
+
+@keyframes violet-pulse {
+  0%, 100% { box-shadow: 0 0 40px var(--glow-violet); }
+  50%       { box-shadow: 0 0 70px var(--glow-violet); }
+}
+
+/* ─── UPLOAD ZONE ─── */
+.upload-zone {
+  border: 2px dashed var(--border-idle);
+  border-radius: 16px;
+  padding: 48px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 300ms ease,
+              background 300ms ease;
+  margin-bottom: 24px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.upload-zone:hover {
+  border-color: var(--teal-1);
+  background: rgba(0, 168, 150, 0.04);
+}
+
+.upload-icon {
+  color: var(--teal-1);
+  opacity: 0.8;
+}
+
+.upload-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary) !important;
+  margin: 0;
+}
+
+.upload-sub {
+  font-size: 14px;
+  color: var(--text-secondary) !important;
+  margin: 0;
+}
+
+/* ─── TEXT INPUT ─── */
+.widget-input-wrap {
+  margin-bottom: 16px;
+}
+
+.widget-textarea {
+  width: 100%;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--text-primary);
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  resize: none;
+  transition: border-color 200ms ease;
+  outline: none;
+}
+
+.widget-textarea:focus {
+  border-color: var(--teal-1);
+}
+
+.widget-textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+.widget-input {
+  width: 100%;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--text-primary);
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 200ms ease;
+  margin-bottom: 12px;
+}
+
+.widget-input:focus {
+  border-color: var(--teal-1);
+}
+
+.widget-input::placeholder {
+  color: var(--text-secondary);
+}
+
+/* ─── PRIVACY LINE ─── */
+.widget-privacy {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* ─── IDENTIFY BUTTON ─── */
+.widget-btn {
+  margin-top: 8px;
+}
+
+.widget-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ─── LOADING STATE ─── */
+.loading-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  min-height: 300px;
+}
+
+.loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid var(--border-glass);
+  border-top-color: var(--violet-1);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-text {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary) !important;
+  text-align: center;
+}
+
+/* ─── RESULT STATE ─── */
+.result-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.result-pest-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.result-severity {
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.result-desc {
+  color: var(--text-secondary) !important;
+  margin: 0;
+}
+
+.result-connect {
+  color: var(--text-secondary) !important;
+  font-size: 15px;
+  margin: 0;
+}
+
+.result-postcode {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ─── EMERGENCY STATE ─── */
+.emergency-banner {
+  background: var(--red-1);
+  color: #ffffff;
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.emergency-call-btn {
+  font-size: 18px;
+  padding: 18px 28px;
+}
+
+.emergency-note {
+  text-align: center;
+  color: var(--red-1) !important;
+}
+
+/* ─── CONNECTED STATE ─── */
+.connected-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.connected-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal-1), var(--teal-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.connected-title {
+  font-size: 22px;
+}
+
+.connected-capture {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ─── WIDGET FOOTER LINE ─── */
+.widget-footer-line {
+  text-align: center;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.widget-biz-link {
+  color: var(--teal-1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 200ms ease;
+}
+
+.widget-biz-link:hover {
+  opacity: 0.8;
+}
+
+/* ─── MOBILE ─── */
+@media (max-width: 768px) {
+  .widget-card {
+    padding: 24px 16px;
+    margin: 0 16px;
+    width: auto;
+  }
+
+  .upload-zone {
+    min-height: 220px;
+  }
+}
