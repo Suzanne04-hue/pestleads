@@ -381,3 +381,15 @@ body {
     gap: 16px;
   }
 }
+/* ─── SCROLL ANIMATIONS ─── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms ease-out,
+              transform 600ms ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
